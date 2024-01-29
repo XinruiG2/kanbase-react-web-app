@@ -1,0 +1,14 @@
+.wd-kanbas-course-navigation li a {
+    text-decoration: none;
+    color: rgb(212,26,44);
+}
+
+.wd-kanbas-course-navigation {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.wd-kanbas-course-navigation li {
+    margin-bottom: 15px;
+}

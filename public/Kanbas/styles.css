@@ -20,3 +20,27 @@ table {
 table tbody {
     width: 100%;
 }
+
+table tbody tr td {
+    padding: 0;
+    margin: 0;
+}
+
+.page-wrapper {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.content-wrapper {
+    margin-left: 80px;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    gap: 20px;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 15px 0;
+}
