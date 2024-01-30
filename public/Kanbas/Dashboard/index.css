@@ -1,0 +1,31 @@
+.course-img {
+    width: 100%;
+    height: 175px;
+    background-size: cover; 
+    background-position: center;
+}
+
+.dashboard-subheader {
+    margin-top: 17px;
+}
+
+.course-card {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px, rgba(0, 0, 0, 0.2) 0px 1px 2px;
+}
+
+.course-go-button {
+    background: none;
+    border: none;
+    color: gray;
+    padding: 0;
+    margin-top: 5px;
+}
+
+.card-title {
+    font-weight: 800;
+    font-size: 0.9rem;
+}
+
+.card-subtext {
+    font-size: 0.85rem;
+}
