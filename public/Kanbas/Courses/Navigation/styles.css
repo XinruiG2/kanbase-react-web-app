@@ -1,14 +1,31 @@
-.wd-kanbas-course-navigation li a {
-    text-decoration: none;
-    color: rgb(212,26,44);
-}
-
-.wd-kanbas-course-navigation {
+.wd-navigation {
+    background-color: white;
     list-style: none;
-    margin: 0;
-    padding: 0;
+    padding: 0px;
+    width: 125px;
+    margin: 0px;
 }
 
-.wd-kanbas-course-navigation li {
-    margin-bottom: 15px;
+.wd-navigation li {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+  
+.wd-navigation li .wd-active {
+    border-left: 2px solid black;
+    color: black;
+    margin-left: -5px;
+    padding-left: 5px;
+}
+
+.wd-navigation a {
+    color: rgb(212,26,44);
+    text-decoration: none;
+}
+  
+.wd-navigation .top-list-element {
+    margin-top: 0;
+    padding-top: 0;
 }

@@ -1,0 +1,23 @@
+.course-header-container {
+    display: flex;
+    gap: 20px;
+    justify-content: start;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.course-header-container i {
+    color: rgb(212,26,44);
+    font-size: 1.4rem;
+}
+
+.header-text {
+    display: flex;
+    gap: 8px;
+    justify-content: start;
+    align-items: center;
+}
+
+.header-text {
+    font-size: 1.15rem;
+}

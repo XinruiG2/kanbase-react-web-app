@@ -3,6 +3,8 @@
         <title>Assignments Edit</title>
         <link rel="stylesheet" href="/Kanbas/styles.css" />
         <link rel="stylesheet" href="/Kanbas/Navigation/index.css" />
+        <link rel="stylesheet" href="/Kanbas/Courses/Navigation/styles.css" />
+        <link rel="stylesheet" href="/Kanbas/Courses/CourseHeader/index.css" />
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" rel="stylesheet">
         <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css" />
         <link rel="stylesheet" href="/Kanbas/Courses/Navigation/styles.css"/>
@@ -43,118 +45,126 @@
                 </ul>  
             </div>
 
-            <div class="content-wrapper">
-                <div class="assignment-edit-specific-navigation">
-                    <ul class="wd-kanbas-course-navigation">
-                        <li>
-                          <a href="/Kanbas/Courses/Home/screen.html">
-                            Home</a></li>
-                        <li><a href="/Kanbas/Courses/Modules/screen.html">
-                            Modules</a></li>
-                        <li><a href="/Kanbas/Courses/Piazza/index.html">
-                            Piazza</a></li>
-                        <li><a href="/Kanbas/Courses/ZoomMeetings/index.html">
-                            Zoom Meetings</a></li>
-                        <li><a href="/Kanbas/Courses/Assignments/screen.html">
-                            Assignments</a></li>
-                        <li><a href="/Kanbas/Courses/ZoomMeetings/index.html">
-                            Quizzes</a></li>
-                        <li><a href="/Kanbas/Courses/Grades/screen.html">
-                            Grades</a></li>
-                        <li><a href="/Kanbas/Courses/People/screen.html">
-                            People</a></li>
-            
-                        <li>
-                          <a href="/Kanbas/Courses/PanoptoVideo/screen.html">
-                            Panopto Video</a></li>
-                        <li><a href="/Kanbas/Courses/Discussions/screen.html">
-                            Discussions</a></li>
-                        <li><a href="/Kanbas/Courses/Announcements/index.html">
-                            Announcements</a></li>
-                        <li><a href="/Kanbas/Courses/Pages/index.html">
-                            Pages</a></li>
-                        <li><a href="/Kanbas/Courses/Files/screen.html">
-                            Files</a></li>
-                        <li><a href="/Kanbas/Courses/Rubrics/index.html">
-                            Rubrics</a></li>
-                        <li><a href="/Kanbas/Courses/Outcomes/screen.html">
-                            Outcomes</a></li>
-                        <li><a href="/Kanbas/Courses/Collaborations/screen.html">
-                            Collaborations</a></li>
-                        <li><a href="/Kanbas/Courses/Syllabus/screen.html">
-                            Syllabus</a></li>
-                        <li><a href="/Kanbas/Courses/Settings/screen.html">
-                            Settings</a></li>
-                    </ul>
-                </div>
-    
-                <div class="assignment-edit-content">
-                    <div style="border-bottom: 1.5px solid #a9a9a9; padding-bottom: 10px;">
-                        <select>
-                            <option selected value="SPEEDGRADER">SpeedGrader</option>
-                        </select>
+            <div class="main-page">
+                <div class="course-header-container">
+                    <i class="fas fa-solid fa-bars"></i>
+                    <div class="header-text">
+                        <a href="/Kanbas/Courses/Home/screen.html" class="red-text">CS4550.12631.202410</a>
+                        <div class="gray-text"> > </div>
+                        <div class="dark-gray-text">Modules</div>
                     </div>
-                    <h3>
-                        Assignment Name
-                    </h3>
-                    <form id="create-assignment">
-                        <input type="text" value="A1 - ENV + HTML" placeholder="Assignemnt name"/><br/><br/>
-                        <textarea cols="20" rows="2"
-                            placeholder="Assignment description"
-                            title="description">This is the assignment description.
-                        </textarea><br/><br/>
-                        <label>Points</label><br/>
-                        <input type="number" placeholder="points" value="100"/><br/><br/>
-                        <label>Assignment Group</label><br/>
-                        <select>
-                            <option>ASSIGNMENTS</option>
-                        </select><br/><br/>
-                        <label>Display Grade as</label><br/>
-                        <select>
-                            <option>Percentage</option>
-                        </select><br/><br/>
-                        <label>Submission Type</label><br/>
-                        <select>
-                            <option>Online</option>
-                        </select><br/><br/>
-            
-                        <label>Online Entry Options</label><br/>
-                        <input type="checkbox" value="TEXT-ENTRY"
-                            name="entry-option" id="chkbox-text-entry"/>
-                        <label for="chkbox-text-entry">Text Entry</label><br/>
-            
-                        <input type="checkbox" value="WEBSITE-URL"
-                            name="entry-option" id="chkbox-website-url"/>
-                        <label for="chkbox-website-url">Website URL</label><br/>
-            
-                        <input type="checkbox" value="MEDIA-RECORDINGS"
-                            name="entry-option" id="chkbox-media-recording"/>
-                        <label for="chkbox-media-recordings">Media Recordings</label><br/>
-            
-                        <input type="checkbox" value="STUDENT-ANNOTATION"
-                            name="entry-option" id="chkbox-student-annotation"/>
-                        <label for="chkbox-student-annotation">Student Annotation</label><br/>
-            
-                        <input type="checkbox" value="FILE-UPLOADS"
-                            name="entry-option" id="chkbox-file-uploads"/>
-                        <label for="chkbox-file-uploads">File Uploads</label><br/><br/>
-            
-                        <label>Assign</label><br/>
-                        <label>Assign to</label><br/>
-                        <input type="text" value="Everyone"/><br/><br/>
-            
-                        <label>Due</label><br/>
-                        <input type="date" value="2021-01-01"/><br/><br/>
-            
-                        <label>Available from</label><br/>
-                        <input type="date" value="2021-01-01"/><br/><br/>
-            
-                        <label>Until</label><br/>
-                        <input type="date" value="2021-01-01"/><br/><br/>
-            
-                        <button type="button">Cancel</button>
-                        <button type="button">Save</button>
-                    </form>
+                </div>
+                <hr class="line-separator" style="border-width: 1px; margin: 17px 0;">
+                <div class="content-wrapper">
+                    <div class="assignment-edit-specific-navigation">
+                        <ul class="wd-navigation">
+                            <li class="top-list-element">
+                                <a href="/Kanbas/Courses/Home/screen.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="/Kanbas/Courses/Modules/screen.html" class="wd-active">Modules</a>
+                            </li>
+                            <li><a href="http://piazza.com">Piazza</a></li>
+                            <li><a href="#">Zoom</a></li>
+                            <li>
+                                <a href="/Kanbas/Courses/Assignments/screen.html">Assignments</a>
+                            </li>
+                            <li><a href="#">Quizzes</a></li>
+                            <li><a href="/Kanbas/Courses/Grades/screen.html">Grades</a></li>
+                            <li><a href="#">People</a></li>
+                
+                            <li>
+                              <a href="/Kanbas/Courses/PanoptoVideo/screen.html">
+                                Panopto Video</a></li>
+                            <li><a href="/Kanbas/Courses/Discussions/screen.html">
+                                Discussions</a></li>
+                            <li><a href="/Kanbas/Courses/Announcements/index.html">
+                                Announcements</a></li>
+                            <li><a href="/Kanbas/Courses/Pages/index.html">
+                                Pages</a></li>
+                            <li><a href="/Kanbas/Courses/Files/screen.html">
+                                Files</a></li>
+                            <li><a href="/Kanbas/Courses/Rubrics/index.html">
+                                Rubrics</a></li>
+                            <li><a href="/Kanbas/Courses/Outcomes/screen.html">
+                                Outcomes</a></li>
+                            <li><a href="/Kanbas/Courses/Collaborations/screen.html">
+                                Collaborations</a></li>
+                            <li><a href="/Kanbas/Courses/Syllabus/screen.html">
+                                Syllabus</a></li>
+                            <li><a href="/Kanbas/Courses/Settings/screen.html">
+                                Settings</a></li>
+                        </ul>
+                    </div>
+        
+                    <div class="assignment-edit-content">
+                        <div style="border-bottom: 1.5px solid #a9a9a9; padding-bottom: 10px;">
+                            <select>
+                                <option selected value="SPEEDGRADER">SpeedGrader</option>
+                            </select>
+                        </div>
+                        <h3>
+                            Assignment Name
+                        </h3>
+                        <form id="create-assignment">
+                            <input type="text" value="A1 - ENV + HTML" placeholder="Assignemnt name"/><br/><br/>
+                            <textarea cols="20" rows="2"
+                                placeholder="Assignment description"
+                                title="description">This is the assignment description.
+                            </textarea><br/><br/>
+                            <label>Points</label><br/>
+                            <input type="number" placeholder="points" value="100"/><br/><br/>
+                            <label>Assignment Group</label><br/>
+                            <select>
+                                <option>ASSIGNMENTS</option>
+                            </select><br/><br/>
+                            <label>Display Grade as</label><br/>
+                            <select>
+                                <option>Percentage</option>
+                            </select><br/><br/>
+                            <label>Submission Type</label><br/>
+                            <select>
+                                <option>Online</option>
+                            </select><br/><br/>
+                
+                            <label>Online Entry Options</label><br/>
+                            <input type="checkbox" value="TEXT-ENTRY"
+                                name="entry-option" id="chkbox-text-entry"/>
+                            <label for="chkbox-text-entry">Text Entry</label><br/>
+                
+                            <input type="checkbox" value="WEBSITE-URL"
+                                name="entry-option" id="chkbox-website-url"/>
+                            <label for="chkbox-website-url">Website URL</label><br/>
+                
+                            <input type="checkbox" value="MEDIA-RECORDINGS"
+                                name="entry-option" id="chkbox-media-recording"/>
+                            <label for="chkbox-media-recordings">Media Recordings</label><br/>
+                
+                            <input type="checkbox" value="STUDENT-ANNOTATION"
+                                name="entry-option" id="chkbox-student-annotation"/>
+                            <label for="chkbox-student-annotation">Student Annotation</label><br/>
+                
+                            <input type="checkbox" value="FILE-UPLOADS"
+                                name="entry-option" id="chkbox-file-uploads"/>
+                            <label for="chkbox-file-uploads">File Uploads</label><br/><br/>
+                
+                            <label>Assign</label><br/>
+                            <label>Assign to</label><br/>
+                            <input type="text" value="Everyone"/><br/><br/>
+                
+                            <label>Due</label><br/>
+                            <input type="date" value="2021-01-01"/><br/><br/>
+                
+                            <label>Available from</label><br/>
+                            <input type="date" value="2021-01-01"/><br/><br/>
+                
+                            <label>Until</label><br/>
+                            <input type="date" value="2021-01-01"/><br/><br/>
+                
+                            <button type="button">Cancel</button>
+                            <button type="button">Save</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

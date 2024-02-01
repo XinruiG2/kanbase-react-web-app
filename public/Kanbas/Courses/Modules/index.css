@@ -1,0 +1,77 @@
+.wd-modules,
+.wd-modules * {
+  border-radius: 0%;
+  border: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.wd-modules {
+  margin: 5px;
+}
+
+.wd-modules > li {
+  background-color: lightgray;
+  border: 1px solid gray !important;
+  border-left: none !important;
+}
+
+.wd-modules > li > div {
+  padding: 6px;
+  border-left: 1px solid gray !important;
+}
+
+.wd-modules > li > ul > li {
+  padding: 5px;
+  border-top: 1px solid gray !important;
+  border-left: 2px solid green;
+}
+
+.wd-modules > li {
+  margin-bottom: 20px;
+}
+
+.heading-item {
+    text-transform: uppercase;
+}
+
+.subtext-spacing {
+    margin-right: 34px;
+}
+
+.link-icon {
+    margin-right: 10px;
+}
+
+.redirect-icon {
+    margin-left: 5px;
+    color: rgb(212,26,44);
+}
+
+button {
+    border: 1px solid gray;
+    border-radius: 3px;
+    padding: 1px 9px;
+}
+
+.header-options-select {
+    border-radius: 3px;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+
+    background-color: #efefef;
+    border: 1px solid gray;
+    width: 127px; 
+    padding: 1px 6px; 
+}
+
+.red-button {
+    background-color: rgb(212,26,44);
+    color: white;
+}
+
+.module-header-separator {
+    margin-top: 15px;
+    margin-bottom: 33px;
+}

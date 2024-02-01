@@ -28,21 +28,17 @@ table tbody tr td {
 
 .page-wrapper {
     display: flex;
-    gap: 20px;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     justify-content: space-between;
 }
 
 .content-wrapper {
-    margin-left: 80px;
     display: flex;
     width: 100%;
     height: 100%;
-    gap: 20px;
     justify-content: space-between;
     box-sizing: border-box;
-    padding: 15px 0;
 }
 
 .center-horizontally {
@@ -60,8 +56,32 @@ table tbody tr td {
     color: rgb(45,59,69);
 }
 
+.red-text {
+    color: rgb(212,26,44);
+}
+
 .line-separator {
     color: gray; 
     border-width: 1.5px; 
     margin: 0;
+    width: 100%;
+}
+
+.main-page {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: start;
+    height: 100%;
+    align-items: start;
+    padding: 0 28px 0 105px;
+}
+
+.align-to-right {
+    display: flex;
+    width: 100%;
+    justify-content: end;
+    align-items: center;
+    gap: 3px;
+    height: 30px;
 }
