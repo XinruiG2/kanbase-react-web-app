@@ -75,3 +75,7 @@ button {
     margin-top: 15px;
     margin-bottom: 33px;
 }
+
+a {
+    text-decoration: none;
+}

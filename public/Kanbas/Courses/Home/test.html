@@ -1,0 +1,154 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="/libs/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="/Kanbas/styles.css" />
+    <link rel="stylesheet" href="/Kanbas/Navigation/index.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/Navigation/styles.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/CourseHeader/index.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/Home/index.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css" />
+  </head>
+  <body>
+    <!-- Implement links to Kanbas and Course Navigation -->
+    <div id="fullPageMenu" class="menu-hidden">
+        <div class="menu-exit-container">
+            <i class="fas fa-times" onclick="toggleMenu()"></i>
+        </div>
+        <div>
+            <a href="/Kanbas/Account/Navigation/index.html">
+                <i class="fas fa-solid fa-user account-icon"></i> Account</a>
+            <a href="/Kanbas/Dashboard/screen.html">
+                <i class="fas fa-tachometer-alt"></i> Dashboard</a>
+            <a href="/Kanbas/Courses/Home/screen.html">
+                    <i class="fas fa-solid fa-book"></i> Courses</a>
+            <a href="/Kanbas/Calendar/index.html">
+                <i class="fa fa-calendar"></i> Calendar</a>
+            <a href="/Kanbas/Inbox/index.html">
+                    <i class="fas fa-solid fa-inbox"></i> Inbox</a>
+            <a href="/Kanbas/History/index.html">
+                    <i class="fas fa-solid fa-clock"></i> History</a>
+            <a href="/Kanbas/Studio/index.html">
+                <i class="fas fa-solid fa-network-wired"></i> Studio</a>
+            <a href="/Kanbas/Commons/index.html">
+                    <i class="fas fa-solid fa-arrow-right"></i> Commons</a>
+            <div class="d-flex">
+                <a href="/Kanbas/Help/index.html">
+                    <i class="fas fa-solid fa-question question-mark"></i> Help</a>
+                <a href="/Kanbas/Help/index.html">
+            </div>
+                <i class="fas fa-solid fa-envelope"></i> Messages</a>
+        </div>
+    </div>
+
+    <div class="d-block d-md-flex">
+        <div class="d-flex d-md-none wd-home-navbar">
+            <i class="fas fa-solid fa-bars wd-home-navbar-menu" onclick="toggleMenu()"></i>
+            <div class="wd-home-navbar-course">
+                <div>CS4550.39591.202430</div>
+                <div>Modules</div>
+            </div>
+            <i class="fas fa-solid fa-caret-down wd-home-navbar-expand"></i>
+        </div>
+      <div class="d-none d-md-block">
+        <ul class="wd-kanbas-navigation">
+            <li class="nav-logo"><img src="../../../images/neu.jpg"/></li>
+            <li class="nav-account"><a href="/Kanbas/Account/Navigation/index.html">
+                <i class="fas fa-solid fa-user account-icon"></i> Account</a></li>
+            <li>
+             <a href="/Kanbas/Dashboard/screen.html">
+                <i class="fas fa-tachometer-alt"></i> Dashboard</a>
+            </li>
+            <li class="nav-courses wd-active">
+                <a href="/Kanbas/Courses/Home/screen.html">
+                    <i class="fas fa-solid fa-book"></i> Courses</a>
+            </li>
+            <li class="nav-calendar">
+             <a href="/Kanbas/Calendar/index.html">
+                <i class="fa fa-calendar"></i> Calendar</a></li>
+            <li class="nav-inbox">
+                <a href="/Kanbas/Inbox/index.html">
+                    <i class="fas fa-solid fa-inbox"></i> Inbox</a></li>
+            <li class="nav-history">
+                <a href="/Kanbas/History/index.html">
+                    <i class="fas fa-solid fa-clock"></i> History</a></li>
+            <li class="nav-studio"><a href="/Kanbas/Studio/index.html">
+                <i class="fas fa-solid fa-network-wired"></i> Studio</a></li>
+            <li class="nav-commons">
+                <a href="/Kanbas/Commons/index.html">
+                    <i class="fas fa-solid fa-arrow-right"></i> Commons</a></li>
+            <li class="nav-help"><a href="/Kanbas/Help/index.html">
+                <i class="fas fa-solid fa-question question-mark"></i><br/> Help</a></li>
+            <li class="nav-messages"><a href="/Kanbas/Help/index.html">
+                <i class="fas fa-solid fa-envelope"></i> Messages</a></li>
+        </ul>
+      </div>
+      <div class="main-page">
+        <div class="course-header-container d-none d-md-flex">
+            <i class="fas fa-solid fa-bars"></i>
+            <div class="header-text">
+                <a href="/Kanbas/Courses/Home/screen.html" class="red-text">CS4550.12631.202410</a>
+                <div class="gray-text"> > </div>
+                <div class="dark-gray-text">Home</div>
+            </div>
+        </div>
+        <hr class="line-separator d-none d-md-block" style="border-width: 1px; margin: 17px 0;">
+        <div class="content-wrapper">
+            <div class="d-none d-md-block">
+                <ul class="wd-navigation">
+                <!-- Copy Course Navigation Here -->
+                    <li class="top-list-element">
+                        <a href="/Kanbas/Courses/Home/screen.html" class="wd-active">Home</a>
+                    </li>
+                    <li>
+                        <a href="/Kanbas/Courses/Modules/screen.html">Modules</a>
+                    </li>
+                    <li><a href="http://piazza.com">Piazza</a></li>
+                    <li><a href="#">Zoom</a></li>
+                    <li>
+                        <a href="/Kanbas/Courses/Assignments/screen.html">Assignments</a>
+                    </li>
+                    <li><a href="#">Quizzes</a></li>
+                    <li><a href="/Kanbas/Courses/Grades/screen.html">Grades</a></li>
+                    <li><a href="#">People</a></li>
+
+                    <li>
+                    <a href="/Kanbas/Courses/PanoptoVideo/screen.html">
+                        Panopto Video</a></li>
+                    <li><a href="/Kanbas/Courses/Discussions/screen.html">
+                        Discussions</a></li>
+                    <li><a href="/Kanbas/Courses/Announcements/index.html">
+                        Announcements</a></li>
+                    <li><a href="/Kanbas/Courses/Pages/index.html">
+                        Pages</a></li>
+                    <li><a href="/Kanbas/Courses/Files/screen.html">
+                        Files</a></li>
+                    <li><a href="/Kanbas/Courses/Rubrics/index.html">
+                        Rubrics</a></li>
+                    <li><a href="/Kanbas/Courses/Outcomes/screen.html">
+                        Outcomes</a></li>
+                    <li><a href="/Kanbas/Courses/Collaborations/screen.html">
+                        Collaborations</a></li>
+                    <li><a href="/Kanbas/Courses/Syllabus/screen.html">
+                        Syllabus</a></li>
+                    <li><a href="/Kanbas/Courses/Settings/screen.html">
+                        Settings</a></li>
+                </ul>
+            </div>
+            <div class="flex-fill">
+                <ul class="list-group wd-modules">
+                    Course Home
+                <!-- Copy Course Home here -->
+                </ul>
+            </div>
+            <div class="flex-grow-0 me-2 d-none d-lg-block" style="width: 250px">
+                <h3>Course Status</h3>
+                <!-- Implement Course Status here -->
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <script src="/Kanbas/Courses/Home/script.js"></script>
+  </body>
+</html>
