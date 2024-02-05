@@ -27,7 +27,7 @@
 }
 
 
-.menu-hidden {
+.menu-horizontal-hidden {
     position: fixed;
     width: 0;
     height: 100%;
@@ -41,6 +41,18 @@
     flex-direction: column;
 }
 
+.menu-vertical-hidden {
+    width: 100%;
+    height: 0;
+    background-color: white;
+    overflow-y: hidden; 
+    transition: 0.5s;
+    z-index: 1; 
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
 #fullPageMenu a {
     padding: 10px 15px;
     text-decoration: none;
@@ -48,6 +60,16 @@
     color: rgb(212,26,44);;
     display: block;
     margin-left: 12px;
+}
+
+#partpageMenu a {
+    text-decoration: none;
+    font-size: 16px;
+    color: rgb(212,26,44);
+    margin-bottom: 4px;
+    display: flex; 
+    align-items: center; 
+    justify-content: start;
 }
 
 #fullPageMenu .fas.fa-times {
@@ -61,4 +83,56 @@
 
 #fullPageMenu a i {
     margin-right: 6px;
+}
+
+.home-icon {
+    margin-right: 4px;
+    margin-top: -2px;
+}
+
+#partPageMenu a i {
+    margin: 3px;
+    margin-right: 5px;
+}
+
+#partPageMenu a #not-visible-option {
+    margin-left: 18px;
+    color: rgb(104, 114, 122);
+}
+
+.home-course-navigation {
+    margin-right: 30px;
+}
+
+.publish-button-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 90%;
+}
+
+.mock-button {
+    padding: 3px 5px;
+    border: 1px solid gray;
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+.green-button {
+    background-color: rgb(123,137,99);
+    color: white;
+}
+
+.home-course-status-options {
+    border: 1px solid gray;
+    border-radius: 3px;
+    width: 100%; 
+    text-align: start;
+    padding: 5px 12px;
+    margin-bottom: 4px;
+}
+
+.home-grid-layout-item {
+    display: grid;
+    grid-template-columns: 0.15fr 0.85fr;
+    margin-bottom: 15px;
 }

@@ -85,3 +85,17 @@ table tbody tr td {
     gap: 3px;
     height: 30px;
 }
+
+.gap-fifteen-pixels {
+    margin-top: 15px;
+}
+
+.smaller-text {
+    font-size: 0.83rem;
+}
+
+.basic-flex-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
