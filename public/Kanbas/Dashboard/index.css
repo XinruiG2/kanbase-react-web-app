@@ -25,6 +25,14 @@
     color: gray;
     padding: 0;
     margin-top: 5px;
+    background-color: transparent;
+    font-weight: bold;
+
+    &:hover {
+        cursor: pointer;
+        color: blue;
+        background-color: transparent;
+    }
 }
 
 .card-title {

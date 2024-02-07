@@ -52,6 +52,7 @@
     border: 1px solid gray;
     border-radius: 3px;
     padding: 1px 9px;
+    font-size: 0.95rem;
 }
 
 .header-options-select {
