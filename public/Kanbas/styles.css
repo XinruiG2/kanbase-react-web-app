@@ -75,6 +75,10 @@ table tbody tr td {
     height: 100%;
     align-items: start;
     padding: 0 28px 0 105px;
+
+    @media (max-width: 767px) {
+        padding: 10px;
+    }
 }
 
 .align-to-right {
