@@ -5,8 +5,13 @@
     background-position: center;
 }
 
+.dashboard-header {
+    font-size: 2rem;
+}
+
 .dashboard-subheader {
     margin-top: 17px;
+    font-size: 1.5rem;
 }
 
 .course-card {
@@ -29,4 +34,19 @@
 
 .card-subtext {
     font-size: 0.85rem;
+}
+
+@media (min-width: 576px) { 
+    .larger-screen-size-card {
+      width: 270px;
+    }
+}
+  
+.xs-screen-option {
+    width: 100%; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    color: gray;
+    margin-bottom: 15px;
 }

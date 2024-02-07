@@ -4,14 +4,54 @@
     <link rel="stylesheet" href="/Kanbas/styles.css" />
     <link rel="stylesheet" href="/Kanbas/Navigation/index.css" />
     <link rel="stylesheet" href="/Kanbas/Dashboard/index.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/Home/index.css" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css" />
   </head>
   <body>
     <table width="100%">
       <tbody>
+        <tr class="d-block d-sm-none">
+            <div id="fullPageMenu" class="d-flex d-sm-none menu-horizontal-hidden">
+                <div class="menu-exit-container">
+                    <i class="fas fa-times" onclick="toggleKanbasNavigation()"></i>
+                </div>
+                <div>
+                    <a href="/Kanbas/Account/Navigation/index.html">
+                        <i class="fas fa-solid fa-user account-icon"></i> Account</a>
+                    <a href="/Kanbas/Dashboard/screen.html">
+                        <i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                    <a href="/Kanbas/Courses/Home/screen.html">
+                            <i class="fas fa-solid fa-book"></i> Courses</a>
+                    <a href="/Kanbas/Calendar/index.html">
+                        <i class="fa fa-calendar"></i> Calendar</a>
+                    <a href="/Kanbas/Inbox/index.html">
+                            <i class="fas fa-solid fa-inbox"></i> Inbox</a>
+                    <a href="/Kanbas/History/index.html">
+                            <i class="fas fa-solid fa-clock"></i> History</a>
+                    <a href="/Kanbas/Studio/index.html">
+                        <i class="fas fa-solid fa-network-wired"></i> Studio</a>
+                    <a href="/Kanbas/Commons/index.html">
+                            <i class="fas fa-solid fa-arrow-right"></i> Commons</a>
+                    <div class="d-flex">
+                        <a href="/Kanbas/Help/index.html">
+                            <i class="fas fa-solid fa-question question-mark"></i> Help</a>
+                        <a href="/Kanbas/Help/index.html">
+                    </div>
+                        <i class="fas fa-solid fa-envelope"></i> Messages</a>
+                </div>
+            </div>
+
+            <div class="d-flex d-sm-none wd-home-navbar">
+                <i class="fas fa-solid fa-bars wd-home-navbar-menu" onclick="toggleKanbasNavigation()"></i>
+                <div class="wd-home-navbar-course">
+                    <div>Dashboard</div>
+                </div>
+                <div></div>
+            </div>
+        </tr>
         <tr>
-          <td valign="top" style="width: 80px">
+          <td valign="top" style="width: 80px;" class="d-none d-sm-block">
             <ul class="wd-kanbas-navigation">
                 <li class="nav-logo"><img src="../../images/neu.jpg"/></li>
                 <li class="nav-account"><a href="/Kanbas/Account/Navigation/index.html">
@@ -46,13 +86,16 @@
           </td>
           <td>
             <div class="p-4">
-                <h1 class="dark-gray-text dashboard-header">Dashboard</h1>
-                <hr class="line-separator">
-                <h4 class="dark-gray-text dashboard-subheader">Published Courses (8)</h4>
+                <h1 class="dark-gray-text dashboard-header d-none d-sm-block">Dashboard</h1>
+                <hr class="line-separator d-none d-sm-block">
+                <h4 class="dark-gray-text dashboard-subheader d-none d-sm-block">Published Courses (8)</h4>
+                <div class="xs-screen-option d-block d-sm-none">
+                    <i class="fas fa-solid fa-bars" style="display: flex; justify-content: end;"></i>
+                </div>
                 <hr class="line-separator">
                 <div class="row center-horizontally">
                     <div class="row row-cols-1 row-cols-md-5 g-4" style="padding: 0; margin-top: 15px;">
-                        <div class="col" style="width: 270px">
+                        <div class="col col-12 larger-screen-size-card">
                             <div class="card course-card">
                                 <img src="../../images/mellow-blue.jpeg" class="card-img-top course-img" alt="course-img"/>
                                 <div class="card-body">
@@ -70,7 +113,7 @@
                             </div>
                         </div>
     
-                        <div class="col" style="width: 270px">
+                        <div class="col col-12 larger-screen-size-card">
                             <div class="card course-card">
                                 <img src="../../images/mellow-blue.jpeg" class="card-img-top course-img" alt="course-img"/>
                                 <div class="card-body">
@@ -88,7 +131,7 @@
                             </div>
                         </div>
     
-                        <div class="col" style="width: 270px">
+                        <div class="col col-12 larger-screen-size-card">
                             <div class="card course-card">
                                 <img src="../../images/mellow-blue.jpeg" class="card-img-top course-img" alt="course-img"/>
                                 <div class="card-body">
@@ -106,7 +149,7 @@
                             </div>
                         </div>
     
-                        <div class="col" style="width: 270px">
+                        <div class="col col-12 larger-screen-size-card">
                             <div class="card course-card">
                                 <img src="../../images/mellow-blue.jpeg" class="card-img-top course-img" alt="course-img"/>
                                 <div class="card-body">
@@ -124,7 +167,7 @@
                             </div>
                         </div>
     
-                        <div class="col" style="width: 270px">
+                        <div class="col col-12 larger-screen-size-card">
                             <div class="card course-card">
                                 <img src="../../images/mellow-blue.jpeg" class="card-img-top course-img" alt="course-img"/>
                                 <div class="card-body">
@@ -142,7 +185,7 @@
                             </div>
                         </div>
     
-                        <div class="col" style="width: 270px">
+                        <div class="col col-12 larger-screen-size-card">
                             <div class="card course-card">
                                 <img src="../../images/mellow-blue.jpeg" class="card-img-top course-img" alt="course-img"/>
                                 <div class="card-body">
@@ -160,7 +203,7 @@
                             </div>
                         </div>
     
-                        <div class="col" style="width: 270px">
+                        <div class="col col-12 larger-screen-size-card">
                             <div class="card course-card">
                                 <img src="../../images/mellow-blue.jpeg" class="card-img-top course-img" alt="course-img"/>
                                 <div class="card-body">
@@ -178,7 +221,7 @@
                             </div>
                         </div>
     
-                        <div class="col" style="width: 270px">
+                        <div class="col col-12 larger-screen-size-card">
                             <div class="card course-card">
                                 <img src="../../images/mellow-blue.jpeg" class="card-img-top course-img" alt="course-img"/>
                                 <div class="card-body">
@@ -202,5 +245,7 @@
         </tr>
       </tbody>
     </table>
+
+    <script src="/Kanbas/Courses/Home/script.js"></script>
   </body>
 </html>
