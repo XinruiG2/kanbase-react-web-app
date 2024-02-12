@@ -6,6 +6,7 @@ import IfElse from "./conditionals/IfElse";
 import TernaryOperator from "./conditionals/TernaryOperator";
 
 import WorkingWithFunctions from "./functions/WorkingWithFunctions";
+import FunctionDestructing from "./functions/FunctionDestructing";
 
 import WorkingWithArrays from "./arrays/WorkingWithArrays";
 import ArrayIndexAndLength from "./arrays/ArrayIndexAndLength";
@@ -14,6 +15,15 @@ import ForLoops from "./arrays/ForLoops";
 import MapFunction from "./arrays/MapFunction";
 
 import JsonStringify from "./json/JsonStringify";
+import House from "./json/House";
+import Spreading from "./json/Spreading";
+import Destructing from "./json/Destructing";
+
+import FindFunction from "./arrays/FindFunction";
+import FindIndex from "./arrays/FindIndex";
+import FilterFunction from "./arrays/FilterFunction";
+
+import TemplateLiterals from "./string/TemplateLiterals";
 
 function JavaScript() {
 
@@ -60,6 +70,14 @@ function JavaScript() {
           <ForLoops />
           <MapFunction />
           <JsonStringify />
+          <FindFunction />
+          <FindIndex />
+          <FilterFunction />
+          <TemplateLiterals />
+          <House />
+          <Spreading />
+          <Destructing />
+          <FunctionDestructing />
        </div>
     );
  }
