@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { courses } from "../Database";
 import './index.css'
+import { FaEllipsisVertical } from "react-icons/fa6";
 
 function Dashboard() {
     const zeroMargin = {
@@ -10,8 +11,11 @@ function Dashboard() {
     
   return (
     <div className="p-4">
-      <h1>Dashboard</h1>              <hr />
-      <h3>Published Courses (7)</h3> <hr />
+      <h1 className="d-none d-sm-block">Dashboard</h1>              <hr className="d-none d-sm-block" />
+      <h3 className="d-none d-sm-block">Published Courses (7)</h3> 
+      <div className="dashboard-view-options">
+        <FaEllipsisVertical className="d-block d-sm-none"/>
+      </div> <hr />
       <div className="row">
         <div className="row row-cols-1 row-cols-md-5 g-4" style={ zeroMargin }>
           {courses.map((course) => (

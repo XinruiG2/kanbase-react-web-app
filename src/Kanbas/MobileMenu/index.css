@@ -1,0 +1,95 @@
+.wd-home-navbar {
+    background-color: black;
+    color: white;
+    justify-content: space-between;
+    padding: 15px 18px;
+    align-items: center;
+}
+
+.wd-home-navbar-course {
+    text-align: center;
+    font-size: 1.05rem;
+}
+
+.wd-home-navbar-menu {
+    font-size: 1.4rem;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.wd-home-navbar-expand {
+    font-size: 1.5rem;
+}
+
+.menu-horizontal-hidden {
+    position: fixed;
+    width: 0;
+    height: 100%;
+    background-color: white;
+    overflow-x: hidden; 
+    transition: 0.5s; 
+    top: 0;
+    left: 0;
+    z-index: 1; 
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-vertical-hidden {
+    width: 100%;
+    height: 0;
+    background-color: white;
+    overflow-y: hidden; 
+    transition: 0.5s;
+    z-index: 1; 
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+#fullPageMenu a {
+    padding: 12px 15px;
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(212,26,44);;
+    margin-left: 12px;
+    display: flex; 
+    align-items: center; 
+    justify-content: start;
+    gap: 12px;
+}
+
+#partpageMenu a {
+    text-decoration: none;
+    font-size: 16px;
+    color: rgb(212,26,44);
+    margin-bottom: 4px;
+    display: flex; 
+    align-items: center; 
+    justify-content: start;
+    gap: 12px;
+}
+
+.menu-exit-container {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+#fullPageMenu .fas.fa-times {
+    font-size: 25px;
+    color: rgb(104,114,122);
+    margin: 20px 27px; 
+    margin-bottom: 15px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+#partPageMenu a #not-visible-option {
+    margin-left: 18px;
+    color: rgb(104, 114, 122);
+}

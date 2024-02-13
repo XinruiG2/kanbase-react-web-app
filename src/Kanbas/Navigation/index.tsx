@@ -17,9 +17,11 @@ function KanbasNavigation() {
     { label: "Commons",  icon: <FaArrowRightFromBracket className="fs-2 red-icon" /> },
     { label: "Help",  icon: <FaRegQuestionCircle className="fs-2 red-icon" /> }
   ];
+
   const { pathname } = useLocation();
+
   return (
-    <ul className="wd-kanbas-navigation">
+    <ul className="wd-kanbas-navigation d-none d-sm-block">
         <li className="nav-logo"><img src="/images/neu.jpg"/></li>
         {links.map((link, index) => (
             <li key={index} className={pathname.includes(link.label) ? "wd-active" : ""}>

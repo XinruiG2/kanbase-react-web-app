@@ -15,4 +15,12 @@ code {
 .main-content {
   width: 100%;
   padding-left: 85px;
+
+  @media (max-width: 575px) { 
+      padding-left: 0;
+  }
+}
+
+.list-styling {
+  list-style: none;
 }
