@@ -1,0 +1,13 @@
+.course-header {
+    font-size: 1.875rem;
+    color: black;
+    font-weight: 500;
+    gap: 20px;
+    color: rgb(197,11,29);
+}
+
+.course-header-description {
+    margin-top: -2.5px;
+    display: flex;
+    gap: 12px;
+}

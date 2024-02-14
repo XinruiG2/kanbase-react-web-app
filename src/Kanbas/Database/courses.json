@@ -12,5 +12,5 @@
   { "_id": "CS103", "name": "Algorithms & Data Structures", "number": "CS3000", "startDate": "2024-01-05",
     "endDate": "2024-04-29", "image": "/images/gray.png"  },
 
-  { "_id": "CS104", "name": "Logic and Computation", "number": "CS2800", "startDate": "2023-09-10",
+  { "_id": "PH101", "name": "Tech & Human Values", "number": "PH1145", "startDate": "2023-09-10",
     "endDate": "2023-12-16", "image": "/images/mellow-blue.jpeg"  } ]

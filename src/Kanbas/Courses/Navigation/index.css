@@ -1,0 +1,29 @@
+.wd-navigation {
+    background-color: white;
+    list-style: none;
+    padding: 0px;
+    width: 125px;
+    margin: 0px;
+}
+
+.wd-navigation li {
+    padding-top: 0;
+    padding-bottom: 20px;
+}
+  
+.wd-navigation li .wd-active {
+    border-left: 2px solid black;
+    color: black;
+    margin-left: -7px;
+    padding-left: 5px;
+}
+
+.wd-navigation a {
+    color: rgb(212,26,44);
+    text-decoration: none;
+}
+  
+.wd-navigation .top-list-element {
+    margin-top: 0;
+    padding-top: 0;
+}

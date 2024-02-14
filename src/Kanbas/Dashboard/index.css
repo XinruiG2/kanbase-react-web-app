@@ -1,14 +1,7 @@
-.dashboard-view-options {
-    display: flex;
-    width: 100%;
-    justify-content: end;
-    align-items: center;
-    font-size: 1.3rem;
-    margin-top: 5px;
-}
+#dashboard-card {
+    width: 300px;
 
-@media (min-width: 576px) { 
-    .larger-screen-size-card {
-      width: 300px;
+    @media (max-width: 576px) {
+        width: 100%;
     }
 }

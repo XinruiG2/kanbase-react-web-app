@@ -1,0 +1,15 @@
+.wd-modules {
+    border: 1px solid lightgray;
+    margin-bottom: 30px;
+}
+
+.wd-modules-item {
+    box-sizing: border-box;
+    padding: 12px;
+}
+
+.wd-modules-lesson-item {
+    padding: 12px;
+    padding-left: 30px;
+    border-top: 1px solid lightgray;
+}

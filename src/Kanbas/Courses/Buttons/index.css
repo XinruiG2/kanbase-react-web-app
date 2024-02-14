@@ -1,0 +1,17 @@
+.course-menu-button {
+    box-sizing: border-box;
+    padding: 4px 9px;
+    border: 1.5px solid lightgray;
+    border-radius: 4px;
+    font-size: 0.92rem;
+}
+
+#dropdown-custom-components {
+    box-sizing: border-box;
+    padding: 4px 9px;
+    border: 1.5px solid lightgray;
+    border-radius: 4px;
+    background-color: rgb(235, 235, 235);
+    color: black;
+    font-size: 0.92rem;
+}

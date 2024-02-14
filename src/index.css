@@ -24,3 +24,50 @@ code {
 .list-styling {
   list-style: none;
 }
+
+.align-at-end {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.align-at-start {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.gray-color {
+  color: rgb(104,114,122);
+}
+
+.dark-gray-color {
+  color: rgb(45,59,69);
+}
+
+.red-color {
+  color: rgb(212,26,44);
+}
+
+.black-color {
+  color: black;
+}
+
+.align-at-top-left {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: start;
+  justify-content: start;
+}
+
+.light-gray-bg {
+  background-color: rgb(235, 235, 235);
+}
+
+.red-bg {
+  background-color: rgb(212,26,44);
+  color: white;
+}

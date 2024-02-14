@@ -13,13 +13,13 @@ function Dashboard() {
     <div className="p-4">
       <h1 className="d-none d-sm-block">Dashboard</h1>              <hr className="d-none d-sm-block" />
       <h3 className="d-none d-sm-block">Published Courses (7)</h3> 
-      <div className="dashboard-view-options">
+      <div className="align-at-end">
         <FaEllipsisVertical className="d-block d-sm-none"/>
       </div> <hr />
       <div className="row">
         <div className="row row-cols-1 row-cols-md-5 g-4" style={ zeroMargin }>
           {courses.map((course) => (
-            <div key={course._id} className="col" style={{ width: 300 }}>
+            <div key={course._id} className="col" id="dashboard-card">
               <div className="card">
                 <img src={course.image} className="card-img-top"
                      style={{ height: 150 }}/>
