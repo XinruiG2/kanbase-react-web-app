@@ -4,6 +4,9 @@ import { HiMiniBars3 } from "react-icons/hi2";
 import './index.css'
 import CourseNavigation from "./Navigation";
 import Modules from "./Modules";
+import Home from "./Home";
+import Assignments from "./Assignments";
+import CourseMobileMenu from "../CourseMobileMenu";
 
 function Courses() {
   const { courseId } = useParams();
@@ -15,24 +18,27 @@ function Courses() {
   const lastSegment = segments.pop();
 
   return (
-    <div className="p-4">
-        <div className="align-at-start course-header">
+    <div>
+        <CourseMobileMenu />
+        <div className="p-4">
+        <div className="align-at-start course-header d-none d-sm-flex">
             <HiMiniBars3 />
             <div className="course-header-description">
                 Course {course?.name} <span className="gray-color">&gt;</span> 
                 <span className="black-color"> {lastSegment}</span>
             </div>
-        </div> <hr />
+        </div> <hr className="d-none d-sm-block" />
+        
         <div className="align-at-start" style={{ alignItems: 'start', gap: '15px' }}>
             <CourseNavigation />
             <div style={{ width: '100%' }}>
-                <div className="overflow-y-scroll">
+                <div className="">
                 <Routes>
                     <Route path="/" element={<Navigate to="Home" />} />
-                    <Route path="Home" element={<div>Home</div>} />
+                    <Route path="Home" element={<Home />} />
                     <Route path="Modules" element={<Modules />} />
                     <Route path="Piazza" element={<div>Piazza</div>} />
-                    <Route path="Assignments" element={<div>Assignments</div>} />
+                    <Route path="Assignments" element={<Assignments />} />
                     <Route path="Assignments/:assignmentId" element={<div>Assignment Edit</div>} />
                     <Route path="Grades" element={<div>Grades</div>} />
                     <Route path="Quizzes" element={<div>Quizzes</div>} />
@@ -52,6 +58,7 @@ function Courses() {
                 </div>
             </div>
         </div>
+    </div>
     </div>
   );
 }

@@ -10,7 +10,7 @@ function ModuleList() {
   const modulesList = modules.filter((module) => module.course === courseId);
   const [selectedModule, setSelectedModule] = useState(modulesList[0]);
   return (
-    <>
+    <div>
       <CourseButtons /> <hr />
       <div>
         {modulesList.map((module) => (
@@ -40,7 +40,7 @@ function ModuleList() {
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 }
 export default ModuleList;

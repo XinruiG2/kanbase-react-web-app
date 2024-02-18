@@ -39,6 +39,14 @@ code {
   justify-content: start;
 }
 
+.align-space-between {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
 .gray-color {
   color: rgb(104,114,122);
 }
@@ -70,4 +78,12 @@ code {
 .red-bg {
   background-color: rgb(212,26,44);
   color: white;
+}
+
+.weight-600 {
+  font-weight: 600;
+}
+
+.weight-500 {
+  font-weight: 500;
 }

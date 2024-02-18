@@ -5,6 +5,7 @@ import Dashboard from "./Dashboard";
 import MobileMenu from "./MobileMenu";
 import { useLocation } from "react-router-dom";
 import Courses from "./Courses";
+import CourseMobileMenu from "./CourseMobileMenu";
 
 function Kanbas() {
     const { pathname } = useLocation();
