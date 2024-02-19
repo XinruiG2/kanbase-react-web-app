@@ -5,7 +5,7 @@ import Dashboard from "./Dashboard";
 import MobileMenu from "./MobileMenu";
 import { useLocation } from "react-router-dom";
 import Courses from "./Courses";
-import CourseMobileMenu from "./CourseMobileMenu";
+import Account from "./Account";
 
 function Kanbas() {
     const { pathname } = useLocation();
@@ -17,7 +17,7 @@ function Kanbas() {
         <div style={{ flexGrow: 1 }} className='main-content'>
             <Routes>
                 <Route path="/" element={<Navigate to="Dashboard" />} />
-                <Route path="Account" element={<h1>Account</h1>} />
+                <Route path="Account/*" element={<Account />} />
                 <Route path="Dashboard" element={<Dashboard />} />
                 <Route path="Courses/:courseId/*" element={<Courses />} />
             </Routes>
