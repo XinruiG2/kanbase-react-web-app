@@ -32,6 +32,7 @@ function Assignments() {
           <div className="wd-assignment-header light-gray-bg">
             <FaEllipsisV className="me-2"/> <span className="weight-600">ASSIGNMENTS</span>
             <span className="float-end">
+                <span className="assignment-grade-percentage">40% of total</span>
               <FaCheckCircle className="text-success" />
               <FaPlusCircle className="ms-2" /><FaEllipsisV className="ms-2" />
             </span>

@@ -1,7 +1,10 @@
 import React from 'react'
 import './index.css'
 import Modules from '../Modules'
-import { FaTimes } from "react-icons/fa";
+import { FaTimes, FaChartBar, FaRegBell } from "react-icons/fa";
+import { FaFileImport, FaArrowRightFromBracket } from "react-icons/fa6";
+import { SlTarget } from "react-icons/sl";
+import { IoMegaphone } from "react-icons/io5";
 
 const Home = () => {
   return (
@@ -9,25 +12,32 @@ const Home = () => {
         <Modules />
         <div className="home-status-container d-none d-lg-block">
             <div className="home-status-options">
-                <div className="custom-home-button light-gray-bg">
+                <div className="custom-home-button light-gray-bg align-at-start">
+                    <FaFileImport />
                     Import Existing Content
                 </div>
-                <div className="custom-home-button light-gray-bg">
+                <div className="custom-home-button light-gray-bg align-at-start">
+                    <FaArrowRightFromBracket />
                     Import from Commons
                 </div>
-                <div className="custom-home-button light-gray-bg">
+                <div className="custom-home-button light-gray-bg align-at-start">
+                    <SlTarget />
                     Choose Home Page
                 </div>
-                <div className="custom-home-button light-gray-bg">
+                <div className="custom-home-button light-gray-bg align-at-start">
+                    <FaChartBar />
                     View Course Stream
                 </div>
-                <div className="custom-home-button light-gray-bg">
+                <div className="custom-home-button light-gray-bg align-at-start">
+                    <IoMegaphone />
                     New Announcement
                 </div>
-                <div className="custom-home-button light-gray-bg">
+                <div className="custom-home-button light-gray-bg align-at-start">
+                    <FaChartBar />
                     New Analytics
                 </div>
-                <div className="custom-home-button light-gray-bg">
+                <div className="custom-home-button light-gray-bg align-at-start">
+                    <FaRegBell />
                     View Course Notifications
                 </div>
             </div>

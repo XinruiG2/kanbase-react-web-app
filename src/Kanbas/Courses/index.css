@@ -1,13 +1,29 @@
 .course-header {
-    font-size: 1.875rem;
+    font-size: 1.65rem;
     color: black;
     font-weight: 500;
     gap: 20px;
     color: rgb(197,11,29);
+
+    @media (min-width: 576px) and (max-width: 768px) {
+        font-size: 1.3rem;
+    }
 }
 
 .course-header-description {
     margin-top: -2.5px;
     display: flex;
     gap: 12px;
+}
+
+.student-view-button {
+    background-color: rgb(230, 230, 230);
+    padding: 5px 12px;
+    border-radius: 3px;
+    border: 1px solid lightgray;
+    font-size: 0.9rem;
+
+    &:hover {
+        cursor: pointer;
+    }
 }

@@ -19,11 +19,12 @@ import {
   } from 'react-icons/fa';
   import { PiVideoDuotone } from 'react-icons/pi';
   import { FaArrowRightFromBracket, FaGear } from 'react-icons/fa6';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useParams } from 'react-router-dom';
 import { IoGitNetwork, IoRocket, IoPeople, IoMegaphone } from "react-icons/io5";
 import { LuPlug2, LuBookMarked } from "react-icons/lu";
 import { GoCommentDiscussion } from "react-icons/go";
 import { FiTarget } from "react-icons/fi";
+import { courses } from "../../Kanbas/Database";
 
 const CourseMobileMenu = () => {
 
@@ -83,13 +84,23 @@ const CourseMobileMenu = () => {
     }
 
     const location = useLocation();
+    const pathname = location.pathname;
+    const lastSlashIndex = pathname.lastIndexOf('/');
     
     const getNewPath = () => {
-        const pathname = location.pathname;
-        const lastSlashIndex = pathname.lastIndexOf('/');
         const newPath = pathname.substring(0, lastSlashIndex) + '/';
         return newPath;
     };
+
+    const getLastPathSegment = () => {
+        return pathname.substring(lastSlashIndex + 1, pathname.length);
+    }
+
+    const { courseId } = useParams();
+    const course = courses.find((course) => course._id === courseId);
+
+    const lastPathSegment = getLastPathSegment();
+    const courseOption = courseLinks.find((courseLink) => courseLink.label == lastPathSegment); 
 
   return (
     <div>
@@ -109,8 +120,8 @@ const CourseMobileMenu = () => {
         <div className="d-flex d-sm-none wd-home-navbar">
             <MdMenu className="fas fa-solid fa-bars wd-home-navbar-menu" onClick={toggleKanbasNavigation} />
             <div className="wd-home-navbar-course">
-                <div>CS4550.39591.202430</div>
-                <div>Modules</div>
+                <div>{course?.number} {course?.name}</div>
+                <div>{courseOption?.label}</div>
             </div>
             <FaCaretDown className="fas fa-solid fa-caret-down wd-home-navbar-expand" onClick={toggleCourseNavigation}/>
         </div>

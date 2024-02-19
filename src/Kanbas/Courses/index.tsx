@@ -7,6 +7,8 @@ import Modules from "./Modules";
 import Home from "./Home";
 import Assignments from "./Assignments";
 import CourseMobileMenu from "../CourseMobileMenu";
+import Piazza from "./Piazza";
+import { FaGlasses } from "react-icons/fa";
 
 function Courses() {
   const { courseId } = useParams();
@@ -21,11 +23,19 @@ function Courses() {
     <div>
         <CourseMobileMenu />
         <div className="p-4">
-        <div className="align-at-start course-header d-none d-sm-flex">
-            <HiMiniBars3 />
-            <div className="course-header-description">
-                Course {course?.name} <span className="gray-color">&gt;</span> 
-                <span className="black-color"> {lastSegment}</span>
+        <div className="align-space-between d-none d-sm-flex">
+            <div className="align-at-start course-header">
+                <HiMiniBars3 />
+                <div className="course-header-description">
+                    {course?.number} {course?.name} <span className="gray-color">&gt;</span> 
+                    <span className="black-color"> {lastSegment}</span>
+                </div>
+            </div>
+            <div className="align-at-end d-xs-none d-sm-none d-m-none d-lg-flex">
+                <span className="student-view-button">
+                    <FaGlasses style={{ marginRight: '4px' }}/>
+                    Student-View
+                </span>
             </div>
         </div> <hr className="d-none d-sm-block" />
         
@@ -37,7 +47,7 @@ function Courses() {
                     <Route path="/" element={<Navigate to="Home" />} />
                     <Route path="Home" element={<Home />} />
                     <Route path="Modules" element={<Modules />} />
-                    <Route path="Piazza" element={<div>Piazza</div>} />
+                    <Route path="Piazza" element={<Piazza />} />
                     <Route path="Assignments" element={<Assignments />} />
                     <Route path="Assignments/:assignmentId" element={<div>Assignment Edit</div>} />
                     <Route path="Grades" element={<div>Grades</div>} />
