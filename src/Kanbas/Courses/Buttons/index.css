@@ -14,4 +14,6 @@
     background-color: rgb(235, 235, 235);
     color: black;
     font-size: 0.92rem;
+    display: flex;
+    align-items: center;
 }

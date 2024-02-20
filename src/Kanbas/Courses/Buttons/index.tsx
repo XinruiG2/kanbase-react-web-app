@@ -3,6 +3,7 @@ import { FaEllipsisVertical } from "react-icons/fa6";
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import './index.css'
+import { FaRegCheckCircle } from "react-icons/fa";
 
 const CourseButtons = () => {
   return (
@@ -11,6 +12,7 @@ const CourseButtons = () => {
         <div className="course-menu-button light-gray-bg">View Progress</div>
         <Dropdown>
             <Dropdown.Toggle id="dropdown-custom-components">
+                <FaRegCheckCircle className="text-success" style={{ marginRight: '3px' }} />
                 Publish All
             </Dropdown.Toggle>
 
