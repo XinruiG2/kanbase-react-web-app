@@ -28,11 +28,11 @@ function Courses() {
             <div className="align-at-start course-header">
                 <HiMiniBars3 />
                 <div className="course-header-description">
-                    {course?.number} {course?.name} <span className="gray-color">&gt;</span> 
+                    {course?.number} 01 FA23 <span className="gray-color">&gt;</span> 
                     <span className="black-color"> {lastSegment}</span>
                 </div>
             </div>
-            <div className="align-at-end d-xs-none d-sm-none d-m-none d-lg-flex">
+            <div className="align-at-end d-none d-md-flex">
                 <span className="student-view-button">
                     <FaGlasses style={{ marginRight: '4px' }}/>
                     Student-View

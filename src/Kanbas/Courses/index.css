@@ -1,19 +1,15 @@
 .course-header {
-    font-size: 1.65rem;
+    font-size: 1.3rem;
     color: black;
     font-weight: 500;
-    gap: 20px;
+    gap: 10px;
     color: rgb(197,11,29);
-
-    @media (min-width: 576px) and (max-width: 768px) {
-        font-size: 1.3rem;
-    }
 }
 
 .course-header-description {
     margin-top: -2.5px;
     display: flex;
-    gap: 12px;
+    gap: 10px;
 }
 
 .student-view-button {
