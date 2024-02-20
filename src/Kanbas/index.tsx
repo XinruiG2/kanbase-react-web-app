@@ -13,7 +13,7 @@ function Kanbas() {
     return(
         <div className="d-block d-sm-flex">
         <KanbasNavigation />
-        {pathname.includes("Dashboard") && <MobileMenu />}
+        {(pathname.includes("Dashboard") || pathname.includes("Account")) && <MobileMenu />}
         <div style={{ flexGrow: 1 }} className='main-content'>
             <Routes>
                 <Route path="/" element={<Navigate to="Dashboard" />} />

@@ -39,6 +39,11 @@ const MobileMenu = () => {
         }
       }
 
+    const location = useLocation();
+    const pathname = location.pathname;
+    const lastSlashIndex = pathname.lastIndexOf('/');
+    const currLocation = pathname.substring(lastSlashIndex + 1, pathname.length);
+
   return (
     <div className='list-styling'>
         <div id="fullPageMenu" className="d-flex d-sm-none menu-horizontal-hidden">
@@ -57,7 +62,7 @@ const MobileMenu = () => {
         <div className="d-flex d-sm-none wd-home-navbar">
                 <MdMenu className="fas fa-solid fa-bars wd-home-navbar-menu" onClick={toggleKanbasNavigation} />
                 <div className="wd-home-navbar-course">
-                    <div>Dashboard</div>
+                    <div>{currLocation}</div>
                 </div>
                 <div></div>
         </div>
