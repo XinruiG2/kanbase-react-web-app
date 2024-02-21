@@ -40,13 +40,13 @@
         {
           "_id": "L202",
           "name": "Combustion Processes",
-          "description": "Understanding combustion processes and efficiency.",
+          "description": "Understanding combustion processes.",
           "module": "M102"
         },
         {
           "_id": "L203",
           "name": "Combustion Instability",
-          "description": "Understanding combustion instability and mitigation.",
+          "description": "Understanding combustion instability.",
           "module": "M102"
         }
       ]
@@ -60,19 +60,19 @@
         {
           "_id": "L301",
           "name": "Nozzle Design",
-          "description": "Overview of different types of rocket nozzles.",
+          "description": "Different types of rocket nozzles.",
           "module": "M103"
         },
         {
           "_id": "L302",
           "name": "Nozzle Performance",
-          "description": "Understanding nozzle performance and efficiency.",
+          "description": "Understanding nozzle performance.",
           "module": "M103"
         },
         {
           "_id": "L303",
           "name": "Nozzle Optimization",
-          "description": "Optimizing nozzle design for specific applications.",
+          "description": "Optimizing nozzle design.",
           "module": "M103"
         }
       ]
@@ -100,34 +100,34 @@
           },
           {
             "_id": "L106",
-            "name": "Airflow and Pressue Distribution",
-            "description": "Laminar vs Turbulent flow.",
+            "name": "Airflow Distribution",
+            "description": ".",
             "module": "M104"
           }
         ]
       },
       {
         "_id": "M105",
-        "name": "Aerodynamic Analysis and Design",
+        "name": "Aerodynamic Design",
         "description": "Analysis and Design.",
         "course": "RS102",
         "lessons": [
           {
             "_id": "L204",
-            "name": "Airfoil and Wing Design",
-            "description": "Wing planforms and aspect ratio.",
+            "name": "Wing Design",
+            "description": "",
             "module": "M105"
           },
           {
             "_id": "L205",
-            "name": "Computational Fluid Dynamics",
-            "description": "Introduction to CFD.",
+            "name": "Fluid Dynamics",
+            "description": "Introduction to FD.",
             "module": "M105"
           },
           {
             "_id": "L206",
-            "name": "Wind Tunnel Testing",
-            "description": "Types of wind tunnels and their uses.",
+            "name": "Wind Tunnels",
+            "description": "Types of wind tunnels.",
             "module": "M105"
           }
         ]
@@ -135,7 +135,7 @@
       {
         "_id": "M106",
         "name": "Applications of Aerodynamics",
-        "description": "Principles of rocket nozzle design and performance optimization.",
+        "description": "",
         "course": "RS102",
         "lessons": [
           {
@@ -146,7 +146,7 @@
           },
           {
             "_id": "L305",
-            "name": "Automotive Aerodynamics",
+            "name": "Aerodynamics in Automotives",
             "description": "Impact of aerodynamics on vehicle performance.",
             "module": "M106"
           },
@@ -176,13 +176,13 @@
           },
           {
             "_id": "L108",
-            "name": "Spacecraft Subsystems",
+            "name": "Spacecraft Systems",
             "description": "Propulsion and power systems.",
             "module": "M107"
           },
           {
             "_id": "L109",
-            "name": "Spacecraft Structures and Materials",
+            "name": "Spacecraft Materials",
             "description": "Design principles for spacecrafts.",
             "module": "M107"
           }
@@ -196,8 +196,8 @@
         "lessons": [
           {
             "_id": "L207",
-            "name": "Payload Design and Integration",
-            "description": "Types of spacecraft payloads.",
+            "name": "Spacecraft Structure",
+            "description": "",
             "module": "M108"
           },
           {
@@ -208,7 +208,7 @@
           },
           {
             "_id": "L209",
-            "name": "Communication and Data Handling",
+            "name": "Communication Systems",
             "description": "Spacecraft communication systems.",
             "module": "M108"
           }
@@ -222,14 +222,14 @@
         "lessons": [
           {
             "_id": "L307",
-            "name": "Interplanetary Mission Design",
-            "description": "Trajectory design.",
+            "name": "Smart Propulsion",
+            "description": ".",
             "module": "M109"
           },
           {
             "_id": "L308",
-            "name": "Small Satellites and CubeSats",
-            "description": "Design and development of CubeSats.",
+            "name": "Small Satellites",
+            "description": "",
             "module": "M109"
           },
           {
