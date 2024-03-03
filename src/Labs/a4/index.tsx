@@ -10,7 +10,6 @@ import DateStateVariable from "./DateStateVariable";
 import ObjectStateVariable from "./ObjectStateVariable";
 import ArrayStateVariable from "./ArrayStateVariable";
 import ParentStateComponent from "./ParentStateComponent";
-import ChildStateComponent from "./ChildStateComponent";
 import ReduxExamples from "./ReduxExamples";
 
 const Assignment4 = () => {

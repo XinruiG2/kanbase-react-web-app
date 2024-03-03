@@ -11,7 +11,7 @@ import CourseMobileMenu from "../CourseMobileMenu";
 import Piazza from "./Piazza";
 import { FaGlasses } from "react-icons/fa";
 
-function Courses() {
+function Courses({ courses }: { courses: Array<{ _id: string; name: string; number: string; startDate: string; endDate: string; image: string }>;} ) {
   const { courseId } = useParams();
   const course = courses.find((course) => course._id === courseId);
 

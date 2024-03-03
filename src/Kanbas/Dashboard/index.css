@@ -5,3 +5,28 @@
         width: 100%;
     }
 }
+
+.card {
+    position: relative;
+}
+
+.edit-delete-buttons {
+    position: absolute;
+    right: 11px;
+    top: 12px;
+    display: flex;
+    gap: 6px;
+    justify-content: space-between;
+}
+
+.db-edit-course-button, .db-delete-course-button {
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px 5px;
+    color: rgb(70, 70, 70);
+}
