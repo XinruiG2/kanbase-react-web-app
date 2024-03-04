@@ -5,6 +5,14 @@ import { FaEllipsisV, FaCheckCircle, FaPlusCircle, FaTimes } from "react-icons/f
 import { useParams } from "react-router";
 import CourseButtons from "../Buttons";
 import { MdEdit } from "react-icons/md";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  addModule,
+  deleteModule,
+  updateModule,
+  setModule,
+} from "./modulesReducer";
+import { KanbasState } from "../../store";
 
 interface Lesson {
     _id: string;
@@ -23,37 +31,35 @@ interface ModuleState {
 
 function ModuleList() {
   const { courseId } = useParams();
-  const [moduleList, setModuleList] = useState(modules);
-  const [module, setModule] = useState<ModuleState>({
-    _id: "0", name: "New Module",
-    description: "New Description",
-    course: courseId || "",
-    lessons: [],
-  });
+  const moduleList = useSelector((state: KanbasState) => 
+    state.modulesReducer.modules);
+  const module = useSelector((state: KanbasState) => 
+    state.modulesReducer.module);
+  const dispatch = useDispatch();
 
-  const addModule = (module: any) => {
-    const newModule = { ...module,
-      _id: new Date().getTime().toString() };
-    const newModuleList = [newModule, ...moduleList];
-    setModuleList(newModuleList);
-  };
+//   const addModule = (module: any) => {
+//     const newModule = { ...module,
+//       _id: new Date().getTime().toString() };
+//     const newModuleList = [newModule, ...moduleList];
+//     setModuleList(newModuleList);
+//   };
 
-  const deleteModule = (moduleId: string) => {
-    const newModuleList = moduleList.filter(
-      (module) => module._id !== moduleId );
-    setModuleList(newModuleList);
-  };
+//   const deleteModule = (moduleId: string) => {
+//     const newModuleList = moduleList.filter(
+//       (module) => module._id !== moduleId );
+//     setModuleList(newModuleList);
+//   };
 
-  const updateModule = () => {
-    const newModuleList = moduleList.map((m) => {
-      if (m._id === module._id) {
-        return module;
-      } else {
-        return m;
-      }
-    });
-    setModuleList(newModuleList);
-  };
+//   const updateModule = () => {
+//     const newModuleList = moduleList.map((m) => {
+//       if (m._id === module._id) {
+//         return module;
+//       } else {
+//         return m;
+//       }
+//     });
+//     setModuleList(newModuleList);
+//   };
 
   return (
     <div>
@@ -61,20 +67,22 @@ function ModuleList() {
       <div>
         <div className="">
             <input value={module.name} className="module-input"
-            onChange={(e) => setModule({
-                ...module, name: e.target.value })}
+            onChange={(e) =>
+                dispatch(setModule({ ...module, name: e.target.value }))}    
             />
-            <button className="bg-success add-module-button" onClick={() => { addModule(module) }}
+            <button className="bg-success add-module-button"
+                    onClick={() => dispatch(addModule({ ...module, course: courseId }))}
                     style={{ marginRight: "6px" }}>
                 Add
             </button>
-            <button className="bg-primary add-module-button" onClick={updateModule}>
+            <button className="bg-primary add-module-button"
+                    onClick={() => dispatch(updateModule(module))}>
                 Update
             </button>
              <br/>
             <textarea value={module.description} className="module-input"
-            onChange={(e) => setModule({
-                ...module, description: e.target.value })}
+            onChange={(e) =>
+                dispatch(setModule({ ...module, description: e.target.value }))}
             />
         </div>
 
@@ -83,12 +91,12 @@ function ModuleList() {
           <div className="wd-modules">
             <div className="wd-modules-item light-gray-bg" key={index}>
                 <button className="modules-delete-button bg-primary d-inline-flex align-items-center"
-                    onClick={(event) => { setModule(module); }}
+                    onClick={() => dispatch(setModule(module))}
                     style={{ marginRight: "5px" }}>
                     <MdEdit />
                 </button>
                 <button className="modules-delete-button d-inline-flex align-items-center"
-                    onClick={() => deleteModule(module._id)}>
+                    onClick={() => dispatch(deleteModule(module._id))}>
                     <FaTimes />
                 </button>
               {module.name}
@@ -100,7 +108,7 @@ function ModuleList() {
             </div>
             {/* {selectedModule._id === module._id && ( */}
               <div className="wd-modules-lesson">
-                {module.lessons?.map((lesson) => (
+                {module.lessons?.map((lesson: Lesson) => (
                   <div className="wd-modules-lesson-item">
                     {lesson.name}
                     <span className="float-end">
