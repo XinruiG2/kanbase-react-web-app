@@ -23,7 +23,7 @@ function Dashboard({ kanbasCourses, course, setCourse, addNewCourse,
   return (
     <div className="p-4">
       <h1 className="d-none d-sm-block">Dashboard</h1> 
-      <h5>Course</h5>
+      <h5>Edit / Add Course</h5>
       <input value={course.name} className="form-control"
              onChange={(e) => setCourse({ ...course, name: e.target.value }) } />
       <input value={course.number} className="form-control"
@@ -32,10 +32,10 @@ function Dashboard({ kanbasCourses, course, setCourse, addNewCourse,
              onChange={(e) => setCourse({ ...course, startDate: e.target.value }) }/>
       <input value={course.endDate} className="form-control" type="date"
              onChange={(e) => setCourse({ ...course, endDate: e.target.value }) } />
-      <button onClick={addNewCourse} >
+      <button onClick={addNewCourse} className="bg-success dashboard-buttons text-white">
         Add
       </button>
-      <button onClick={updateCourse} >
+      <button onClick={updateCourse} className="bg-warning dashboard-buttons">
         Update
       </button>
       <hr className="d-none d-sm-block" />

@@ -2,19 +2,19 @@
     {
       "_id": "M101",
       "name": "Introduction to Rocket Propulsion",
-      "description": "Basic principles of rocket propulsion and rocket engines.",
+      "description": "Basics of rocket propulsion.",
       "course": "RS101",
       "lessons": [
         {
           "_id": "L101",
           "name": "History of Rocketry",
-          "description": "A brief history of rocketry and space exploration.",
+          "description": "History of space exploration.",
           "module": "M101"
         },
         {
           "_id": "L102",
           "name": "Rocket Propulsion Fundamentals",
-          "description": "Basic principles of rocket propulsion.",
+          "description": "Basics of rocket propulsion.",
           "module": "M101"
         },
         {
@@ -28,13 +28,13 @@
     {
       "_id": "M102",
       "name": "Fuel and Combustion",
-      "description": "Understanding rocket fuel, combustion processes, and efficiency.",
+      "description": "Understanding combustion processes.",
       "course": "RS101",
       "lessons": [
         {
           "_id": "L201",
           "name": "Rocket Fuel",
-          "description": "Overview of different types of rocket fuels.",
+          "description": "Types of rocket fuels.",
           "module": "M102"
         },
         {
@@ -54,7 +54,7 @@
     {
       "_id": "M103",
       "name": "Nozzle Design",
-      "description": "Principles of rocket nozzle design and performance optimization.",
+      "description": "Basics of nozzle design.",
       "course": "RS101",
       "lessons": [
         {
@@ -83,7 +83,7 @@
     {
         "_id": "M104",
         "name": "Fundamentals of Aerodynamics",
-        "description": "Basic principles of aerodynamics.",
+        "description": "Basics of aerodynamics.",
         "course": "RS102",
         "lessons": [
           {
@@ -135,7 +135,7 @@
       {
         "_id": "M106",
         "name": "Applications of Aerodynamics",
-        "description": "Principles of rocket nozzle design and performance optimization.",
+        "description": "Performance optimization.",
         "course": "RS102",
         "lessons": [
           {
@@ -165,7 +165,7 @@
       {
         "_id": "M107",
         "name": "Introduction to Spacecraft Design",
-        "description": "Basic principles of Spacecraft Design.",
+        "description": "Basics of spacecraft design.",
         "course": "RS103",
         "lessons": [
           {
@@ -273,7 +273,7 @@
       {
         "_id": "M111",
         "name": "Week 2",
-        "description": "Analysis and Design.",
+        "description": "HTML + CSS.",
         "course": "CS101",
         "lessons": [
           {
@@ -299,7 +299,7 @@
       {
         "_id": "M112",
         "name": "Week 3",
-        "description": "Advanced topics.",
+        "description": "More CSS.",
         "course": "CS101",
         "lessons": [
           {
@@ -355,7 +355,7 @@
       {
         "_id": "M114",
         "name": "PS 1",
-        "description": "First HW.",
+        "description": "First HW",
         "course": "CS102",
         "lessons": [
           {
@@ -381,7 +381,7 @@
       {
         "_id": "M115",
         "name": "PS 2",
-        "description": "Advanced topics.",
+        "description": "Advanced topics",
         "course": "CS102",
         "lessons": [
           {
@@ -437,7 +437,7 @@
       {
         "_id": "M117",
         "name": "Week 2",
-        "description": "Week 2.",
+        "description": "Week 2",
         "course": "CS103",
         "lessons": [
           {
@@ -463,7 +463,7 @@
       {
         "_id": "M118",
         "name": "Week 3",
-        "description": "Advanced topics.",
+        "description": "Week 3",
         "course": "CS103",
         "lessons": [
           {
@@ -520,7 +520,7 @@
       {
         "_id": "M120",
         "name": "Tutorials and Samples",
-        "description": "Week 2.",
+        "description": "Writing Tips",
         "course": "PH101",
         "lessons": [
           {
@@ -546,7 +546,7 @@
       {
         "_id": "M121",
         "name": "Autonomous Systems",
-        "description": "Advanced topics.",
+        "description": "AI Vehicles",
         "course": "PH101",
         "lessons": [
           {

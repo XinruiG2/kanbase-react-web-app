@@ -30,3 +30,11 @@
     padding: 3px 5px;
     color: rgb(70, 70, 70);
 }
+
+.dashboard-buttons {
+    margin-top: 14px;
+    border: none;
+    padding: 3px 10px;
+    border-radius: 4px;
+    margin-right: 5px;
+}

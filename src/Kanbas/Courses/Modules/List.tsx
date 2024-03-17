@@ -99,7 +99,7 @@ function ModuleList() {
                     onClick={() => dispatch(deleteModule(module._id))}>
                     <FaTimes />
                 </button>
-              {module.name}
+              {module.name} - {module.description}
               <span className="float-end">
                 <FaCheckCircle className="text-success" />
                 <FaPlusCircle className="ms-2" />
