@@ -1,4 +1,4 @@
-import { courses } from "../../Kanbas/Database";
+// import { courses } from "../../Kanbas/Database";
 import { Navigate, Route, Routes, useParams, useLocation } from "react-router-dom";
 import { HiMiniBars3 } from "react-icons/hi2";
 import './index.css'
@@ -10,10 +10,25 @@ import AssignmentEdit from "./Assignments/Edit";
 import CourseMobileMenu from "../CourseMobileMenu";
 import Piazza from "./Piazza";
 import { FaGlasses } from "react-icons/fa";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
-function Courses({ courses }: { courses: Array<{ _id: string; name: string; number: string; startDate: string; endDate: string; image: string }>;} ) {
+function Courses() {
   const { courseId } = useParams();
-  const course = courses.find((course) => course._id === courseId);
+  const API_BASE = process.env.REACT_APP_API_BASE;
+//   const course = courses.find((course) => course._id === courseId);
+  const COURSES_API = `${API_BASE}/api/courses`;;
+  const [course, setCourse] = useState<any>({ _id: "" });
+  const findCourseById = async (courseId?: string) => {
+    const response = await axios.get(
+      `${COURSES_API}/${courseId}`
+    );
+    setCourse(response.data);
+  };
+
+  useEffect(() => {
+    findCourseById(courseId);
+  }, [courseId]);
 
   const location = useLocation();
   const pathname = location.pathname;

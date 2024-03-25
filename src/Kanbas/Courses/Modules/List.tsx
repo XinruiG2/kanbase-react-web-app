@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./index.css";
 import { modules } from "../../Database";
 import { FaEllipsisV, FaCheckCircle, FaPlusCircle, FaTimes } from "react-icons/fa";
@@ -11,7 +11,9 @@ import {
   deleteModule,
   updateModule,
   setModule,
+  setModules,
 } from "./modulesReducer";
+import * as client from "./client";
 import { KanbasState } from "../../store";
 
 interface Lesson {
@@ -31,35 +33,36 @@ interface ModuleState {
 
 function ModuleList() {
   const { courseId } = useParams();
+
+  useEffect(() => {
+    client.findModulesForCourse(courseId)
+      .then((modules) =>
+        dispatch(setModules(modules))
+    );
+  }, [courseId]);
+
+  const handleAddModule = () => {
+    client.createModule(courseId, module).then((module) => {
+      dispatch(addModule(module));
+    });
+  };
+
+  const handleDeleteModule = (moduleId: string) => {
+    client.deleteModule(moduleId).then((status) => {
+      dispatch(deleteModule(moduleId));
+    });
+  };
+
+  const handleUpdateModule = async () => {
+    const status = await client.updateModule(module);
+    dispatch(updateModule(module));
+  };
+
   const moduleList = useSelector((state: KanbasState) => 
     state.modulesReducer.modules);
   const module = useSelector((state: KanbasState) => 
     state.modulesReducer.module);
   const dispatch = useDispatch();
-
-//   const addModule = (module: any) => {
-//     const newModule = { ...module,
-//       _id: new Date().getTime().toString() };
-//     const newModuleList = [newModule, ...moduleList];
-//     setModuleList(newModuleList);
-//   };
-
-//   const deleteModule = (moduleId: string) => {
-//     const newModuleList = moduleList.filter(
-//       (module) => module._id !== moduleId );
-//     setModuleList(newModuleList);
-//   };
-
-//   const updateModule = () => {
-//     const newModuleList = moduleList.map((m) => {
-//       if (m._id === module._id) {
-//         return module;
-//       } else {
-//         return m;
-//       }
-//     });
-//     setModuleList(newModuleList);
-//   };
 
   return (
     <div>
@@ -71,12 +74,12 @@ function ModuleList() {
                 dispatch(setModule({ ...module, name: e.target.value }))}    
             />
             <button className="bg-success add-module-button"
-                    onClick={() => dispatch(addModule({ ...module, course: courseId }))}
+                    onClick={handleAddModule}
                     style={{ marginRight: "6px" }}>
                 Add
             </button>
             <button className="bg-primary add-module-button"
-                    onClick={() => dispatch(updateModule(module))}>
+                    onClick={handleUpdateModule}>
                 Update
             </button>
              <br/>
@@ -96,7 +99,7 @@ function ModuleList() {
                     <MdEdit />
                 </button>
                 <button className="modules-delete-button d-inline-flex align-items-center"
-                    onClick={() => dispatch(deleteModule(module._id))}>
+                    onClick={() => handleDeleteModule(module._id)}>
                     <FaTimes />
                 </button>
               {module.name} - {module.description}
