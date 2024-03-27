@@ -18,7 +18,6 @@ function Kanbas() {
     console.log(API_BASE);
 
     const [kanbasCourses, setKanbasCourses] = useState<any[]>([]);
-    // const COURSES_API = "https://kanbas-node-server-app-emy8.onrender.com/api/courses";
     const COURSES_API = `${API_BASE}/api/courses`;
     const findAllCourses = async () => {
         const response = await axios.get(COURSES_API);
