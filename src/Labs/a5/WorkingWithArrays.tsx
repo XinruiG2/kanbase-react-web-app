@@ -10,7 +10,8 @@ interface Todo {
 }
 
 function WorkingWithArrays() {
-    const API = "http://localhost:4000/a5/todos";
+    const API_BASE = process.env.REACT_APP_API_BASE;
+    const API = `${API_BASE}/a5/todos`;
     const [todo, setTodo] = useState({id: 1, title: "NodeJS Assignment",
             description: "Create a NodeJS server with ExpressJS",
             due: "2021-09-09",
