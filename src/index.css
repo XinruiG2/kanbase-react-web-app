@@ -39,6 +39,12 @@ code {
   justify-content: start;
 }
 
+.align-at-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .align-space-between {
   width: 100%;
   display: flex;
@@ -86,4 +92,11 @@ code {
 
 .weight-500 {
   font-weight: 500;
+}
+
+.basic-button {
+  border: 1px solid gray;
+  border-radius: 3px;
+  padding: 3px 9px;
+  font-size: 0.9rem;
 }

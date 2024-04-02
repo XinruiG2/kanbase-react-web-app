@@ -6,9 +6,11 @@ import CourseNavigation from "./Navigation";
 import Modules from "./Modules";
 import Home from "./Home";
 import Assignments from "./Assignments";
+import Quizzes from "./Quizzes";
 import AssignmentEdit from "./Assignments/Edit";
 import CourseMobileMenu from "../CourseMobileMenu";
 import Piazza from "./Piazza";
+import QuizzesDetails from "./Quizzes/Details";
 import { FaGlasses } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import axios from "axios";
@@ -16,8 +18,7 @@ import axios from "axios";
 function Courses() {
   const { courseId } = useParams();
   const API_BASE = process.env.REACT_APP_API_BASE;
-//   const course = courses.find((course) => course._id === courseId);
-  const COURSES_API = `${API_BASE}/api/courses`;;
+  const COURSES_API = `${API_BASE}/api/courses`;
   const [course, setCourse] = useState<any>({ _id: "" });
   const findCourseById = async (courseId?: string) => {
     const response = await axios.get(
@@ -35,6 +36,19 @@ function Courses() {
   const segments = pathname.split('/');
   const lastSegment = segments.pop();
 
+  function isNumeric(str: any) {
+    return /^\d+(\.\d+)?$/.test(str);
+  }
+
+  function getPath() {
+    if (isNumeric(lastSegment)) {
+        const segmentBefore = segments.pop();
+        return segmentBefore + " > " + lastSegment;
+    } else {
+        return lastSegment
+    }
+  }
+
   return (
     <div>
         <CourseMobileMenu />
@@ -44,7 +58,7 @@ function Courses() {
                 <HiMiniBars3 />
                 <div className="course-header-description">
                     {course?.number} 01 FA23 <span className="gray-color">&gt;</span> 
-                    <span className="black-color"> {lastSegment}</span>
+                    <span className="black-color"> {getPath()}</span>
                 </div>
             </div>
             <div className="align-at-end d-none d-md-flex">
@@ -67,7 +81,8 @@ function Courses() {
                     <Route path="Assignments" element={<Assignments />} />
                     <Route path="Assignments/:assignmentId" element={<AssignmentEdit />} />
                     <Route path="Grades" element={<div>Grades</div>} />
-                    <Route path="Quizzes" element={<div>Quizzes</div>} />
+                    <Route path="Quizzes" element={<Quizzes />} />
+                    <Route path="Quizzes/:quizId" element={<QuizzesDetails />} />
                     <Route path="People" element={<div>People</div>} />
                     <Route path="Zoom" element={<div>Zoom</div>} />
                     <Route path="Discussions" element={<div>Discussions</div>} />

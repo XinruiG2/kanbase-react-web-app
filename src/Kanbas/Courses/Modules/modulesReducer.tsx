@@ -6,7 +6,7 @@ interface Module {
     _id?: string;
     course: string;
     lessons: [];
-  }
+ }
 
 const initialState = {
   modules: [] as Module[],

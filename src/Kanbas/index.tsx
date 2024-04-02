@@ -6,7 +6,6 @@ import MobileMenu from "./MobileMenu";
 import { useLocation } from "react-router-dom";
 import Courses from "./Courses";
 import Account from "./Account";
-// import { courses } from "./Database";
 import { useState, useEffect } from "react";
 import axios from 'axios';
 import store from "./store";
@@ -41,15 +40,8 @@ function Kanbas() {
             console.log("error: " + err);
             console.log(JSON.stringify(course));
         }
-        
-        // const newCourse = { ...course,
-        //                     _id: new Date().getTime().toString() };
-        // setKanbasCourses([...kanbasCourses, { ...course, ...newCourse }]);
     };
     
-    // const deleteCourse = (courseId: string) => {
-    //     setKanbasCourses(kanbasCourses.filter((course) => course._id !== courseId));
-    // };    
     const deleteCourse = async (courseId: string) => {
         const response = await axios.delete(
           `${COURSES_API}/${courseId}`

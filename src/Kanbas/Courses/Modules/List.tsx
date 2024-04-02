@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "./index.css";
-import { modules } from "../../Database";
 import { FaEllipsisV, FaCheckCircle, FaPlusCircle, FaTimes } from "react-icons/fa";
 import { useParams } from "react-router";
 import CourseButtons from "../Buttons";
@@ -109,7 +108,6 @@ function ModuleList() {
                 <FaEllipsisV className="ms-2" />
               </span>
             </div>
-            {/* {selectedModule._id === module._id && ( */}
               <div className="wd-modules-lesson">
                 {module.lessons?.map((lesson: Lesson) => (
                   <div className="wd-modules-lesson-item">

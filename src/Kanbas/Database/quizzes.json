@@ -1,0 +1,29 @@
+[
+    {
+        "_id": "Q1",
+        "title": "Q1 - HTML",
+        "dueDate": "2024-09-21",
+        "dueTime": "1pm",
+        "points": 29,
+        "numQuestions": 11,
+        "status": false
+    },
+    {
+        "_id": "Q2",
+        "title": "Q2 - CSS",
+        "dueDate": "2024-10-05",
+        "dueTime": "1pm",
+        "points": 32,
+        "numQuestions": 7,
+        "status": false
+    },
+    {
+        "_id": "E1",
+        "title": "EXAM 1 FA 23",
+        "dueDate": "2024-10-26",
+        "dueTime": "5:30pm",
+        "points": 113,
+        "numQuestions": 20,
+        "status": true
+    }
+]

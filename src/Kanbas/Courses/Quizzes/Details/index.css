@@ -1,0 +1,28 @@
+.quiz-details-grid {
+    display: grid;
+    grid-template-columns: .33fr .67fr;
+    gap: 12px;
+    font-size: 0.97rem;
+}
+
+.quiz-details-topics {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: start;
+    align-items: end;
+    font-weight: 500;
+    gap: 8px;
+}
+
+.quiz-details-specifics {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.four-column-grid {
+    display: grid;
+    grid-template-columns: 0.25fr 0.25fr 0.25fr 0.25fr;
+}
