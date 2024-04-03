@@ -100,3 +100,9 @@ code {
   padding: 3px 9px;
   font-size: 0.9rem;
 }
+
+.cursor-change-on-hover {
+  &:hover {
+    cursor: pointer;
+  }
+}

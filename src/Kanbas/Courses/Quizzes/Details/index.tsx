@@ -10,7 +10,7 @@ import '../../../../index.css'
 import './index.css'
 
   const QuizzesDetails = () => {
-    const { quizId } = useParams();
+    const { courseId, quizId } = useParams();
     const dispatch = useDispatch();
     const quiz = useSelector((state: KanbasState) => 
         state.quizzesReducer.quiz);
@@ -45,7 +45,11 @@ import './index.css'
                 {quiz.published ? <span><FaCheckCircle /> Published</span> : <span><AiOutlineStop /> Not Published</span>}
             </button>
             <button className="basic-button">Preview</button>
-            <button className="basic-button">Edit</button>
+            <button className="basic-button">
+                <Link className="text-black"
+                      to={`/Kanbas/Courses/${courseId}/Quizzes/${quiz._id}/edit`}
+                      style={{fontWeight: 400, textDecoration: "none"}}>Edit</Link>
+            </button>
             <button className="basic-button"><FaEllipsisV /></button>
         </div>
         <hr />

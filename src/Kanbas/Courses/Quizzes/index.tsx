@@ -128,7 +128,7 @@ const Quizzes = () => {
                             <Dropdown.Item>
                                 <button className="no-bg">
                                 <Link className="wd-assignment-name weight-600"
-                                    to={`/Kanbas/Courses/${courseId}/Quizzes/${quiz._id}`}
+                                    to={`/Kanbas/Courses/${courseId}/Quizzes/${quiz._id}/details`}
                                     style={{fontWeight: 500}}>Edit</Link>
                                 </button>
                             </Dropdown.Item>

@@ -14,6 +14,7 @@ import QuizzesDetails from "./Quizzes/Details";
 import { FaGlasses } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import QuizzesEdit from "./Quizzes/Edit";
 
 function Courses() {
   const { courseId } = useParams();
@@ -41,9 +42,10 @@ function Courses() {
   }
 
   function getPath() {
-    if (isNumeric(lastSegment)) {
+    const secondToLastSegment = segments.pop();
+    if (isNumeric(secondToLastSegment)) {
         const segmentBefore = segments.pop();
-        return segmentBefore + " > " + lastSegment;
+        return segmentBefore + " > " + secondToLastSegment;
     } else {
         return lastSegment
     }
@@ -82,7 +84,8 @@ function Courses() {
                     <Route path="Assignments/:assignmentId" element={<AssignmentEdit />} />
                     <Route path="Grades" element={<div>Grades</div>} />
                     <Route path="Quizzes" element={<Quizzes />} />
-                    <Route path="Quizzes/:quizId" element={<QuizzesDetails />} />
+                    <Route path="Quizzes/:quizId/details" element={<QuizzesDetails />} />
+                    <Route path="Quizzes/:quizId/edit" element={<QuizzesEdit />} />
                     <Route path="People" element={<div>People</div>} />
                     <Route path="Zoom" element={<div>Zoom</div>} />
                     <Route path="Discussions" element={<div>Discussions</div>} />
