@@ -12,6 +12,15 @@ export const publishQuiz = async (quiz: any) => {
     return response.data;
 };  
 
+export const updateQuiz = async (quiz: any) => {
+    // const quizStatus = !quiz.published;
+    // const newQuiz = { ...quiz, published: quizStatus };
+
+    const response = await axios.
+      put(`${QUIZZES_API}/${quiz._id}`, quiz);
+    return response.data;
+};  
+
 export const createQuiz = async (courseId: any, module: any) => {
     const response = await axios.post(
       `${COURSES_API}/${courseId}/quizzes`,
@@ -36,4 +45,4 @@ export const findSpecificQuiz = async (quizId: any) => {
     const response = await axios
       .get(`${QUIZZES_API}/${quizId}`);
     return response.data;
-  };
+};

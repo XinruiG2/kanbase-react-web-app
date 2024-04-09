@@ -44,7 +44,10 @@ import './index.css'
             <button className="basic-button bg-success text-white">
                 {quiz.published ? <span><FaCheckCircle /> Published</span> : <span><AiOutlineStop /> Not Published</span>}
             </button>
-            <button className="basic-button">Preview</button>
+            <button className="basic-button">
+                <Link className="wd-assignment-name"
+                                    to={`/Kanbas/Courses/${courseId}/Quizzes/${quiz._id}/preview`}
+                                    style={{fontSize: "0.9rem", textTransform: "capitalize"}}>Preview</Link></button>
             <button className="basic-button">
                 <Link className="text-black"
                       to={`/Kanbas/Courses/${courseId}/Quizzes/${quiz._id}/edit`}
@@ -72,19 +75,19 @@ import './index.css'
                 <div>Lock Questions After Answering</div>
             </div>  
             <div className="quiz-details-specifics">
-                <div>Graded Quiz</div>
+                <div>{quiz.assignmentType}</div>
                 <div>{quiz.numPoints}</div>
-                <div>QUIZZES</div>
-                <div>No</div>
-                <div>30 Minutes</div>
-                <div>No</div>
+                <div>{quiz.group}</div>
+                <div>{quiz.shuffleAnswers ? "Yes" : "No"}</div>
+                <div>{quiz.timeLimit} Minutes</div>
+                <div>{quiz.multipleAttempts ? "Yes" : "No"}</div>
                 <div>Always</div>
-                <div>Immediately</div>
-                <div>Yes</div>
+                <div>{quiz.whenToShowAnswers}</div>
+                <div>{quiz.oneAtTime ? "Yes" : "No"}</div>
                 <div>No</div>
                 <div>No</div>
-                <div>No</div>
-                <div>No</div>
+                <div>{quiz.camRequired ? "Yes" : "No"}</div>
+                <div>{quiz.lockAfter ? "Yes" : "No"}</div>
             </div>
         </div>
 

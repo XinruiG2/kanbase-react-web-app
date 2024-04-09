@@ -108,7 +108,10 @@ const Quizzes = () => {
                     <div className="align-at-start">
                         <IoRocketOutline className="text-success rocket-icon" style={{ marginRight: "17px" }}/>
                         <div className="quiz-description align-at-start" style={{flexDirection: "column", alignItems: "start"}}>
-                            <div className="quiz-title">{quiz.title}</div>
+                            <Link className="quiz-title"
+                                    to={`/Kanbas/Courses/${courseId}/Quizzes/${quiz._id}/details`}
+                                    style={{fontWeight: 600, textDecoration: "none", color: "black"}}>{quiz.title}</Link>
+                            {/* <div className="quiz-title">{quiz.title}</div> */}
                             <div className="quiz-mini-description">
                                 <b>{getAvailability(quiz)}</b><span className="description-separator">|</span> 
                                 <b>Due</b> {formatDate(quiz.dueDate)} at {quiz.dueTime}<span className="description-separator">|</span> 
@@ -144,6 +147,11 @@ const Quizzes = () => {
                                     {quiz.published ? "Unpublish" : "Publish"}
                                 </button>
                             </Dropdown.Item>
+                            <Dropdown.Item><button className="no-bg">
+                                <Link className="wd-assignment-name weight-600"
+                                    to={`/Kanbas/Courses/${courseId}/Quizzes/${quiz._id}/preview`}
+                                    style={{fontWeight: 500}}>Preview</Link>
+                                    </button></Dropdown.Item>
                             <Dropdown.Item><button className="no-bg">Copy</button></Dropdown.Item>
                             <Dropdown.Item><button className="no-bg">Sort</button></Dropdown.Item>
                         </Dropdown.Menu>

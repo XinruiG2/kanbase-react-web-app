@@ -1,0 +1,11 @@
+.quiz-warning {
+    color: rgb(212,26,44);
+    background-color: rgba(221, 121, 93, 0.15);
+    padding: 12px 14px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin: 15px 0;
+}

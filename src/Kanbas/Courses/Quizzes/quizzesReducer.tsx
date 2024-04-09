@@ -1,7 +1,23 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+interface Answer {
+  _id: string;
+  answerText: string;
+  correctOrNot: boolean;
+}
+
+interface Question {
+  _id: string;
+  title: string;
+  type: string;
+  points: number;
+  description: string;
+  answers: Answer[];
+}
+
 interface Quiz {
     title: string;
+    description: string;
     dueDate: string;
     dueTime: string;
     _id?: string;
@@ -10,12 +26,25 @@ interface Quiz {
     numQuestions: number;
     numPoints: number;
     published: boolean;
+    assignmentType: string;
+    group: string;
+    shuffleAnswers: boolean;
+    timeLimit: number;
+    multipleAttempts: boolean;
+    showAnswers: boolean;
+    whenToShowAnswers: string;
+    accessCode: string;
+    oneAtTime: boolean;
+    camRequired: boolean;
+    lockAfter: boolean;
+    questions: Question[];
  }
 
 const initialState = {
   quizzes: [] as Quiz[],
   quiz: { 
     title: "Default Quiz", 
+    description: "",
     dueDate: "2025-01-05",
     availableUntil: "2025-01-05",
     notAvailableUntil: "2025-01-01",
@@ -23,7 +52,19 @@ const initialState = {
     status: false,
     numQuestions: 10,
     numPoints: 10,
-    published: false, },
+    published: false,
+    assignmentType: "Graded Quiz",
+    group: "Quizzes",
+    shuffleAnswers: true,
+    timeLimit: 20,
+    multipleAttempts: false,
+    showAnswers: true,
+    whenToShowAnswers: "Immediately",
+    accessCode: "",
+    oneAtTime: true,
+    camRequired: false,
+    lockAfter: false, 
+    questions: [], },
 };
 
 const quizzesSlice = createSlice({

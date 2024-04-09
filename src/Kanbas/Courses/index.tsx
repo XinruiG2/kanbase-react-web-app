@@ -15,6 +15,7 @@ import { FaGlasses } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import QuizzesEdit from "./Quizzes/Edit";
+import Preview from "./Quizzes/Preview";
 
 function Courses() {
   const { courseId } = useParams();
@@ -86,6 +87,7 @@ function Courses() {
                     <Route path="Quizzes" element={<Quizzes />} />
                     <Route path="Quizzes/:quizId/details" element={<QuizzesDetails />} />
                     <Route path="Quizzes/:quizId/edit" element={<QuizzesEdit />} />
+                    <Route path="Quizzes/:quizId/preview" element={<Preview />} />
                     <Route path="People" element={<div>People</div>} />
                     <Route path="Zoom" element={<div>Zoom</div>} />
                     <Route path="Discussions" element={<div>Discussions</div>} />
